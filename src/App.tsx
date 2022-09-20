@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 // 引入routes组件
 import routes from "./routes";
 // 引入包管理工具
