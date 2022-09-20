@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import Login from './Login';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <Redirect path="/"  exact={true} to={{pathname: '/login'}} />
+      <Route exact path='/login' component={Login} />
+      <Switch>
+        <App />
+      </Switch>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

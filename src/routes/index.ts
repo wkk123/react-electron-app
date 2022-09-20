@@ -1,20 +1,23 @@
 // 导入路由组件
-import Login from '../pages/Login';
-import Home from '../pages/Home';
+// import Login from './../Login';
+// import layout from '../pages/layout';
+import Information from './../pages/information';
+import AddressList from './../pages/addressList';
 // 导入路由管理工具
-import {RouteConfig} from 'react-router-config'
+import { RouteConfig } from 'react-router-config'
  
 const routes:RouteConfig = [
   {
-    path:'/',
+    path:'/information',
     exact:true,
-    component:Login
+    component: Information
   },
   {
-    path:'/home',
+    path:'/addressList',
     exact:true,
-    component:Home
+    component: AddressList
   },
 ]
+
  
 export default routes;
