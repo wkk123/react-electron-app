@@ -1,13 +1,238 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  list-style: none;
+  font-style: normal;
+  /*防止点击闪烁*/
+  -webkit-tap-highlight-color: transparent;
+  /*缩放网页，文字大小不变*/
+  -webkit-text-size-adjust: none;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+*:hover {
+  outline: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(200, 200, 200, 0);
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-size: 12px;
+  font-family: Microsoft YaHei \5FAE\8F6F\96C5\9ED1
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%
+}
+html,
+body {
+  height: 100%
+}
+b,
+strong {
+  font-weight: bold
+}
+
+input {
+  vertical-align: middle;
+}
+input::-ms-clear {
+  display: none;
+}
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+  border: 0
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Microsoft YaHei \5FAE\8F6F\96C5\9ED1
+}
+small {
+  font-size: 12px
+}
+ul,
+ol {
+  list-style: none
+}
+sup {
+  vertical-align: text-top
+}
+sub {
+  vertical-align: text-bottom
+}
+fieldset,
+img {
+  border: 0
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+a {
+  text-decoration: none
+}
+a:hover {
+  text-decoration: none
+}
+.clearfix:before,
+.clearfix:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0
+}
+.clearfix:after {
+  clear: both
+}
+.clearfix {
+  zoom: 1
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  display: block;
+  margin: 0;
+  padding: 0
+}
+
+/* add siyuanheiti*/ 
+
+html,
+body {
+  height: 100%;
+  height: 100vh;
+  background: #fff;
+  font-family: SourceHanSansCN \601d\6e90\9ed1\4f53;
+  font-family: "Noto Sans SC";
+  /* font-weight: 100; */
+}
+
+/* 设置iconfont标签font-family */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "iconfont";
+  font-size: 16px;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+
+/*去除虚线*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input {
+  border: none
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="search"],
+input[type="reset"] {
+  -webkit-appearance: none;
+}
+
+a {
+  text-decoration: none;
+  /*ios禁止页面在新窗口打开*/
+  -webkit-touch-callout: none;
+}
+
+button,
+textarea,
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
 }

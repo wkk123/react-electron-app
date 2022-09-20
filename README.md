@@ -84,3 +84,15 @@ alias: {
 -->
 
 
+# npm i --save-dev electron
+
+# react更新同步更新electron
+# npm install concurrently --save-dev
+
+# npm install wait-on --save-dev
+
+# 更新不打开浏览器
+# npm install cross-env
+
+# electron热更新
+# npm install -g nodemon

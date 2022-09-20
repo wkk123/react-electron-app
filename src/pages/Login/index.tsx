@@ -1,6 +1,7 @@
 
 import React, { Component } from "react";
 import {RouteComponentProps} from "react-router-dom";
+// import './index.less';
 interface IProps {}
 
 type HomeProps = IProps & RouteComponentProps;
@@ -17,18 +18,10 @@ export default class Login extends Component<HomeProps,IState> {
   loginBtn(){
     this.props.history.push("/home");
   }
+
   render() {
     return (
       <div className="login">
-        <div className="container">
-          <h3 className="center"> Login页面</h3>
-          <p>欢迎来到首页</p>
-          <button
-            onClick={()=>{
-              this.loginBtn()
-            }}
-          >登录</button>
-        </div>
       </div>
     );
   }
