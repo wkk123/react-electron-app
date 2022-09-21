@@ -96,3 +96,25 @@ alias: {
 
 # electron热更新
 # npm install -g nodemon
+
+# 配置反向代理和axios
+
+# 安装axios 和 http-proxy-middleware（后面反向代理会用到）：
+
+# npm i axios http-proxy-middleware -S
+
+# 在src目录下创建api文件夹，然后创建index.ts 和 request.ts 文件
+
+# 在src文件夹中创建setupProxy.js,内容配置如下
+
+# 配置Redux
+
+# 安装Redux
+
+# npm i redux react-redux -S
+
+# 在src路径下创建store文件夹，文件夹中创建两个文件action.ts和index.ts两个文件
+
+# 我们在 action.ts中定义type，然后返回设置状态的type和函数
+
+# npm i install mockjs -D  安装mock

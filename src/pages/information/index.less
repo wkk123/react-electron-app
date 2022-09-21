@@ -2,3 +2,51 @@
 .information{
   .wh(100%,100%);
 }
+.info_list{
+  .wh(100%,100%);
+  border-right: 1px solid @border-color;
+  overflow-y: auto;
+  .info_item{
+    .wh(100%,62px);
+    padding: 10px;
+    box-sizing: border-box;
+    .flexStyle(row,flex-start);
+    &.active{
+      background-color: #dcdcdc;
+    }
+    .item_img{
+      .wh(38px,38px);
+      border-radius: 5px;
+    }
+    .item_content{
+      .wh(calc(100% - 38px - 10px),100%);
+      margin-left: 10px;
+      .flexStyle(column,space-between);
+    }
+    .item_top{
+      .wh(100%,20px);
+      .flexStyle(row,space-between,flex-start);
+      .item_name{
+        display: inline-block;
+        .wh(calc(100% - 70px),auto);
+      }
+      .item_time{
+        display: inline-block;
+        .wh(70px,auto);
+        .sc(10px,@text-color-label,400,right);
+      }
+    }
+    .item_bottom{
+      .wh(100%,20px);
+      .item_lastinfo{
+        .wh(95%,100%);
+        line-height: 20px;
+        display: inline-block;
+        .sc(12px,@text-color-label,400,left);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; // 默认不换行；
+      }
+    }
+  }
+}

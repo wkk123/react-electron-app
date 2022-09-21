@@ -2,8 +2,22 @@
 import React, { Component } from "react";
 import './index.less';
 import { Frame } from './../../components';
+import {RouteComponentProps} from "react-router-dom";
+interface IProps {}
 
-export default class addressList extends Component {
+type addressProps = IProps & RouteComponentProps;
+
+interface IState {}
+
+class AddressList extends Component<addressProps,IState> {
+  constructor(props: addressProps) {
+    super(props);
+    this.state={
+
+    }
+  }
+
+
   render() {
     return (
       <div className="addressList">
@@ -15,3 +29,5 @@ export default class addressList extends Component {
     );
   }
 }
+
+export default AddressList;

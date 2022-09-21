@@ -6,6 +6,10 @@ import './App.less';
 import { renderRoutes, RouteConfig } from "react-router-config";
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
+
+// 引入connect连接组件
+import {connect} from "react-redux";
+
 // 导入公共组件
 import Nav from './nav';
 import Layout from './layout';
@@ -25,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect((props,state)=>Object.assign({},props,state),{})(App);

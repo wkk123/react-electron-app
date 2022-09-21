@@ -5,21 +5,23 @@ import {RouteComponentProps} from "react-router-dom";
 import './index.less';
 interface IProps {}
 
-type HomeProps = IProps & RouteComponentProps;
+type LoginProps = IProps & RouteComponentProps;
 
 interface IState {
   account: string,
   password: string,
 }
 
-export default class Login extends Component<HomeProps,IState> {
-  constructor(props: HomeProps) {
+export default class Login extends Component<LoginProps,IState> {
+  constructor(props: LoginProps) {
     super(props);
     this.state={
       account: '77@qq.com',
       password: 'Ws123456',
     }
   }
+  
+  // 登录
   loginBtn(){
     this.props.history.push("/information");
   }

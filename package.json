@@ -18,6 +18,7 @@
     "@types/react-router-config": "^5.0.6",
     "@types/react-router-dom": "^5.3.3",
     "antd": "^4.23.2",
+    "axios": "^0.27.2",
     "babel-jest": "^27.4.2",
     "babel-loader": "^8.2.3",
     "babel-plugin-named-asset-import": "^0.3.8",
@@ -37,6 +38,7 @@
     "file-loader": "^6.2.0",
     "fs-extra": "^10.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "http-proxy-middleware": "^2.0.6",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.3",
     "jest-resolve": "^27.4.2",
@@ -77,6 +79,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "mock": "node mock/server.ts",
     "electron-start": "electron .",
     "electron": "concurrently \"npm run start\" \"npm run electron-start\""
   },
@@ -157,6 +160,8 @@
   "devDependencies": {
     "concurrently": "^7.4.0",
     "electron": "^20.1.4",
+    "install": "^0.13.0",
+    "mockjs": "^1.1.0",
     "wait-on": "^6.0.1"
   }
 }
