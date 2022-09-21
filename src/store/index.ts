@@ -39,6 +39,8 @@ const rootReducer=combineReducers({
   TodoReducer
 })
 
-export const store=createStore(rootReducer,applyMiddleware(localSet)); //// 中间件注入 				
-    
 export type AppState=ReturnType<typeof rootReducer>
+
+const store=createStore(rootReducer,applyMiddleware(localSet)); //// 中间件注入 				
+
+export default store

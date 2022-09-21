@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 //引入rootReducer组件
 import { Provider } from "react-redux";
-import store from "./store";
+import store from "./store/index";
 
 // 导入登录组件
 import Login from './Login';

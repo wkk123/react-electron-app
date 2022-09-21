@@ -22,6 +22,6 @@ export const localSet: MiddlewareFunction = store => next => action => {
 export const postTodos: MiddlewareFunction = store => next => action => {
   console.log(store.getState().TodoReducer)
   let result = next(action);
-  post(store.getState().TodoReducer)
+  // post(store.getState().TodoReducer)
   return result
 }
