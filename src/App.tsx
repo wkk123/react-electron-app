@@ -6,6 +6,7 @@ import './App.less';
 import { renderRoutes, RouteConfig } from "react-router-config";
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
+// 导入公共组件
 import Nav from './nav';
 import Layout from './layout';
 

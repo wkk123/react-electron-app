@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+// 导入登录组件
 import Login from './Login';
 
 ReactDOM.render(

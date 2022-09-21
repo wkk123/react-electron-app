@@ -1,5 +1,15 @@
 @import '@/assets/less/publicFn.less';
 .nav{
-  .wh(10%,100%);
+  .wh(10%,100%,rgb(225,226,226));
   .flexStyle(column,flex-start);
+  .nav_item{
+    .wh(100%,80px);
+    .flexStyle();
+  }
+  .nav_icon{
+    .sc(26px);
+    &.active{
+      color: rgb(26,184,78);
+    }
+  }
 }

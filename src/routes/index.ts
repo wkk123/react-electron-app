@@ -1,6 +1,4 @@
 // 导入路由组件
-// import Login from './../Login';
-// import layout from '../pages/layout';
 import Information from './../pages/information';
 import AddressList from './../pages/addressList';
 // 导入路由管理工具

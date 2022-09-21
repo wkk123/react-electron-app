@@ -1,15 +1,59 @@
-
 import React, { Component } from "react";
+import { GithubOutlined, MessageOutlined, UserOutlined } from '@ant-design/icons';
+import { withRouter, RouteComponentProps } from "react-router-dom";
 import './index.less';
+interface IProps {}
 
-export default class nav extends Component {
+type navProps = IProps & RouteComponentProps;
+
+interface IState {
+  currentIndex: number,
+}
+
+
+class nav extends Component<navProps,IState> {
+  constructor(props:navProps) {
+    super(props);
+    this.state={
+      currentIndex: 1,
+    }
+  }
+
+  // 跳转页面
+  goPage(num:number,page:string){
+    this.setState({
+      currentIndex: num
+    },()=>{
+      this.props.history.push(page);
+    })
+  }
+
   render() {
+    const { currentIndex } = this.state;
     return (
       <div className="nav">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className="nav_item">
+          <GithubOutlined  className={`nav_icon ${false&&'active'}`} />
+        </div>
+        <div
+          className="nav_item"
+          onClick={()=>{
+            this.goPage(1,'/information')
+          }}
+        >
+          <MessageOutlined  className={`nav_icon ${currentIndex === 1&&'active'}`} />
+        </div>
+        <div
+          className="nav_item"
+          onClick={()=>{
+            this.goPage(2,'/addressList')
+          }}
+        >
+          <UserOutlined  className={`nav_icon ${currentIndex === 2&&'active'}`} />
+        </div>
       </div>
     );
   }
 }
+
+export default withRouter(nav)
