@@ -24,5 +24,31 @@
   }
 }
 .userInfo_box{
-  .wh(100%,100%)
+  .wh(100%,100%);
+  .flexStyle();
+  .userInfo_content{
+    .content_item{
+      .wh(300px,auto);
+      padding-top: 30px;
+      min-height: 140px;
+      border-bottom: 1px solid @border-color;
+      box-sizing: border-box;
+      &:last-child{
+        .flexStyle(column,flex-start);
+        border: none;
+      }
+    }
+    .item_text{
+      .sc(16px,@text-color-label);
+    }
+    .item_btn{
+      .sc(16px,@text-color-white,500);
+      .wh(94px,36px);
+      padding: 0;
+      margin: 0;
+      background-color: #1ab84d;
+      border: none;
+      border-radius: 5px;
+    }
+  }
 }

@@ -10,8 +10,6 @@ axios.defaults.timeout = 180000; //3min
 
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
-
-
 // 请求拦截器
 axios.interceptors.request.use(function (config) {
   // 在发送请求之前做些什么
@@ -46,11 +44,9 @@ axios.interceptors.response.use(function (response) {
   }
 });
 
-export const AxiosAll = async (method, url, params, data) => {
-    axios.defaults.headers['token'] = '';
+export const AxiosAll = async (method:any, url:any, params:any, data:any) => {
     try {
-      let response = '';
-        response = await axios({
+      let response = await axios({
           method,
           url,
           params,
@@ -63,27 +59,23 @@ export const AxiosAll = async (method, url, params, data) => {
 };
 
 
-export const httpGet = (url, params) => {
-  return AxiosAll('get', url, params);
+export const httpGet = (url:any, params:any) => {
+  return AxiosAll('get', url, params, {});
 };
 
-export const httpPost = (url, data) => {
+export const httpPost = (url:any, data:any) => {
   return AxiosAll('post', url, {}, data);
 };
 
-export const httpPut = (url, data) => {
+export const httpPut = (url:any, data:any) => {
   return AxiosAll('put', url, {}, data);
 };
 
-export const httpDelete = (url, data) => {
+export const httpDelete = (url:any, data:any) => {
   return AxiosAll('delete', url, {}, data);
 };
 
-export const httpDownload = (url, params) => {
-  return AxiosAll('download', url, params);
-};
-
-export const httpStatusMsg =(status)=>{
+export const httpStatusMsg =(status:any)=>{
   switch (status) {
     case 400:
       return ' 服务器不理解请求的语法，请联系管理员';

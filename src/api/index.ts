@@ -1,16 +1,16 @@
-// import { httpGet } from './request';
-// //列表
-// // export function getProfileList(config: { page: string; }) {
-// //   const params = new URLSearchParams()
-// //   params.append('page', config.page);
-// //   return Service({
-// //     url: './api/profile',
-// //     data: params
-// //   })
-// // }
+import { httpGet } from './request';
 
-// export function getProfileList() {
-//   // const params = new URLSearchParams()
-//   // params.append();
-//   // return httpGet('./api/profile')
-// }
+// 获取聊天记录
+export function getChattingRecords() {
+  return httpGet('/api/informationInfo',{})
+}
+
+// 获取聊天列表
+export function getList() {
+  return httpGet('/api/informationList',{})
+}
+
+// 获取通讯列表
+export function getAddressBook() {
+  return httpGet('/api/addressBook',{})
+}
