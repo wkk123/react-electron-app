@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import './index.less';
 import { Frame } from './../../components';
 import {RouteComponentProps} from "react-router-dom";
+import { getProfileList } from './../../api/index';
+
 interface IProps {}
 
 type InfoProps = IProps & RouteComponentProps;
@@ -30,6 +32,12 @@ export default class information extends Component<InfoProps,IState> {
         }
       ],
     }
+  }
+
+  componentDidMount(): void {
+    getProfileList().then(res=>{
+      console.log('res', res)
+    })
   }
 
   // 进入某一个详情
@@ -64,13 +72,23 @@ export default class information extends Component<InfoProps,IState> {
       </div>
     )
   }
-  // 消息详情页面
+
+  // 消息聊天窗
+  chatWindow=()=>{
+    return(
+      <div className="window_box">
+        <div className="window_title">{'昵称'}</div>
+        <div className="window_list"></div>
+        <div className="window_text"></div>
+      </div>
+    )
+  }
   render() {
     return (
       <div className="information">
         <Frame
           List={this.infoList()}
-          Info={'内容'}
+          Info={this.chatWindow()}
         />
       </div>
     );

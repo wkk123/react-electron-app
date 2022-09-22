@@ -9,14 +9,16 @@ app.use(bodyParser.urlencoded({            //此项必须在 bodyParser.json 下
 
 let router = express.Router();
 
+// 测试
 app.get('/', function (req, res) {
   res.send('hello world');
 });
 
 // router.use("/test",require('./test'));
+
 // 以下就是模拟的接口--profile
-router.use("/api/profile", function (req, res) {
-  console.log(req.body);
+router.use("/api/profiles", function (req, res) {
+  console.log('req.body', req.body);
   //调用mock方法模拟数据
   let data = Mock.mock({
     // 属性 list 的值是一个数组，其中含有 1 到 10 个元素

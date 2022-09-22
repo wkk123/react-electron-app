@@ -17,13 +17,34 @@ class AddressList extends Component<addressProps,IState> {
     }
   }
 
+  // 左侧通讯录列表
+  addressList=()=>{
+    return(
+      <ul className="list_box">
+        <li className={`list_item ${true&&'active'}`}>
+          <img className="item_img" src={require('@/assets/images/portrait.png')} alt="" />
+          <h3 className="item_name">{'昵称'}</h3>
+        </li>
+      </ul>
+    )
+  }
+
+  // 用户详情
+  userInfo=()=>{
+    return(
+      <div className="userInfo_box">
+
+      </div>
+    )
+  }
+
 
   render() {
     return (
       <div className="addressList">
         <Frame
-          List={'列表'}
-          Info={'内容'}
+          List={this.addressList()}
+          Info={this.userInfo()}
         />
       </div>
     );

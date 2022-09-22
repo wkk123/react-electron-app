@@ -1,10 +1,16 @@
-import { Service } from './request';
-//获取汽车列表
-export function getCarList(config: { page: string; }) {
-  const params = new URLSearchParams()
-  params.append('page', config.page);
-  return Service({
-    url: './api/getCarList',
-    data: params
-  })
-}
+// import { httpGet } from './request';
+// //列表
+// // export function getProfileList(config: { page: string; }) {
+// //   const params = new URLSearchParams()
+// //   params.append('page', config.page);
+// //   return Service({
+// //     url: './api/profile',
+// //     data: params
+// //   })
+// // }
+
+// export function getProfileList() {
+//   // const params = new URLSearchParams()
+//   // params.append();
+//   // return httpGet('./api/profile')
+// }

@@ -2,3 +2,27 @@
 .addressList{
   .wh(100%,100%);
 }
+.list_box{
+  .wh(100%,100%,#f5f5f5);
+  .list_item{
+    .wh(100%,58px);
+    .flexStyle(row,flex-start);
+    padding: 0 10px;
+    box-sizing: border-box;
+    &.active{
+      background-color: #dcdcdc;
+    }
+    .item_img{
+      .wh(38px,38px);
+      border-radius: 5px;
+    }
+    .item_name{
+      .sc(14px,@text-color-base,500,left);
+      padding-left: 8px;
+      margin: 0;
+    }
+  }
+}
+.userInfo_box{
+  .wh(100%,100%)
+}

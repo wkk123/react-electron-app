@@ -50,3 +50,20 @@
     }
   }
 }
+.window_box{
+  .wh(100%,100%,#f0f0f0);
+  .window_title{
+    .wh(100%,60px);
+    padding: 15px 20px;
+    box-sizing: border-box;
+    .sc(18px,@text-color-base,500,left);
+    border-bottom: 1px solid @border-color;
+  }
+  .window_list{
+    .wh(100%,calc(100% - 60px - 160px));
+    border-bottom: 1px solid @border-color;
+  }
+  .window_text{
+    .wh(100%,160px);
+  }
+}
