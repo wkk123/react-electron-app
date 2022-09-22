@@ -23,7 +23,7 @@ export default class Login extends Component<LoginProps,IState> {
   
   // 登录
   loginBtn(){
-    this.props.history.push("/information");
+    this.props.history.push("/lottery");
   }
 
   render() {

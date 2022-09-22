@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { GithubOutlined, MessageOutlined, UserOutlined } from '@ant-design/icons';
+import { GithubOutlined, MessageOutlined, UserOutlined, ShoppingOutlined } from '@ant-design/icons';
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import './index.less';
 interface IProps {}
@@ -15,10 +15,13 @@ class nav extends Component<navProps,IState> {
   constructor(props:navProps) {
     super(props);
     this.state={
-      currentIndex: 1,
+      currentIndex: 3,
     }
   }
 
+  componentDidMount(): void {
+    // console.log(this.props)
+  }
   // 跳转页面
   goPage(num:number,page:string){
     this.setState({
@@ -50,6 +53,14 @@ class nav extends Component<navProps,IState> {
           }}
         >
           <UserOutlined  className={`nav_icon ${currentIndex === 2&&'active'}`} />
+        </div>
+        <div
+          className="nav_item"
+          onClick={()=>{
+            this.goPage(3,'/lottery')
+          }}
+        >
+          <ShoppingOutlined  className={`nav_icon ${currentIndex === 3&&'active'}`} />
         </div>
       </div>
     );
