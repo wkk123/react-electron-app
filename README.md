@@ -118,3 +118,8 @@ alias: {
 # 我们在 action.ts中定义type，然后返回设置状态的type和函数
 
 # npm i install mockjs -D  安装mock
+
+# 项目启动 
+# npm start 
+# npm run electron-start #桌面启动
+# npm run mock # mock 数据启动
