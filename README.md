@@ -51,20 +51,16 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## npm i react-router-dom@5.2.0 react-router@5.2.0 react-router-config @types/react-router-config @types/react-router-dom -S
 # 添加 less
 
-## npm i less less-loader -S 
-## npm run eject 暴露 congig 文件
-
-### 找到config文件夹目录下wedpack.config.js文件，在70行左右有个cssRegex，在此处添加
+# npm i less less-loader -S 
+# npm run eject 暴露 congig 文件
+# 找到config文件夹目录下wedpack.config.js文件，在70行左右有个cssRegex，在此处添加
 
 # // less
 # const lessRegex = /\.less$/;
 # const lessModuleRegex = /\.module\.less$/;
 
-
-
 # 配置别名@(选配) config.js 中 webpack.config.js 中搜索alias
 
-<!--
 
 alias: {
   // Support React Native Web
@@ -80,9 +76,6 @@ alias: {
   '@': path.resolve(__dirname, '../src'),
   '@view': path.resolve(__dirname, '../src/view'),
 }, 
-
--->
-
 
 # npm i --save-dev electron
 
