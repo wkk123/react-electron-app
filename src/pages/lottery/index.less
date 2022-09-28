@@ -1,4 +1,45 @@
 @import '@/assets/less/publicFn.less';
 .lottery{
   .wh(100%,100%);
+  .flexStyle(column);
+}
+.lottery_content{
+  .wh(280px,280px);
+  .lottery_plate{
+    .wh(280px,280px,@main-base-primary-color);
+    border-radius: 50%;
+  }
+  .lottery_arrows{
+    .wh(40px,40px)
+  }
+}
+
+.lottery_list{
+  .wh(240px,240px);
+  .flexStyle(row,flex-start,flex-start,wrap);
+  .award_item{
+    .wh(75px,75px);
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border:1px solid @border-color;
+    border-radius: 5px;
+    .sc(20px,@text-color-base,500);
+    box-sizing: border-box;
+    .flexStyle();
+    &.active{
+      border-color: @main-base-primary-color;
+      background-color: @main-base-primary-color;
+      color: @text-color-hint;
+    }
+  }
+  .award_Btn{
+    background-color: red;
+    .sc(22,@text-color-primary,500);
+    cursor: pointer;
+  }
+}
+
+.lottery_btn{
+  .wh(80px,36px,@main-base-primary-color);
+  .sc(20px,@text-color-white);
 }
