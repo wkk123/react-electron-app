@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { GithubOutlined, MessageOutlined, UserOutlined, ShoppingOutlined } from '@ant-design/icons';
+import { GithubOutlined, MessageOutlined, UserOutlined, ShoppingOutlined, FolderOutlined } from '@ant-design/icons';
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import './index.less';
 interface IProps {}
@@ -61,6 +61,14 @@ class nav extends Component<navProps,IState> {
           }}
         >
           <ShoppingOutlined  className={`nav_icon ${currentIndex === 3&&'active'}`} />
+        </div>
+        <div
+          className="nav_item"
+          onClick={()=>{
+            this.goPage(4,'/handle')
+          }}
+        >
+          <FolderOutlined  className={`nav_icon ${currentIndex === 4&&'active'}`} />
         </div>
       </div>
     );
